@@ -13,8 +13,8 @@ class AppHeader extends HTMLElement {
                 </div>
                 <div class="header-menu">
                     <ul>
-                        <li><a href="#">Catatan Kamu</a></li>
-                        <li><a href="#">Tambah Catatan</a></li>
+                        <li><a href="listNotes.html">Catatan Kamu</a></li>
+                        <li><a href="addNotes.html">Tambah Catatan</a></li>
                     </ul>
                 </div>
             </header>
