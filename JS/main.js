@@ -1,5 +1,6 @@
 import "./Utils/CustomComponents.js";
 import notesData from "./data/notesData.js";
+import { DateFormatter } from "./Utils/DateFormatter.js";
 
 const notesContainer = document.getElementById('notes-container');
 
@@ -9,7 +10,7 @@ function renderBaseNotes(container) {
             <div class="card-list-notes" id="${note.id}">
                 <div class="card-header">
                     <h3>${note.title}</h3>
-                    <p>2 hari yang lalu</p>
+                    <p>${DateFormatter(note.createdAt)}</p>
                 </div>
                 <hr>
                 <div class="card-content">
