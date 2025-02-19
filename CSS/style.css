@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "main-regular";
+    src: url('../fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "main-medium";
+    src: url('../fonts/AtkinsonHyperlegibleNext-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "main-semibold";
+    src: url('../fonts/AtkinsonHyperlegibleNext-SemiBold.ttf') format('truetype');
+}
