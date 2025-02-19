@@ -19,3 +19,7 @@ function renderBaseNotes(container) {
         `);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderBaseNotes(notesContainer);
+});
