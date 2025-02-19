@@ -7,8 +7,16 @@ class AppHeader extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <header>
-                <h1>Nottie Catat</h1>
+            <header class="app-header">
+                <div class="header-title">
+                    <h1>Nottie</h1>
+                </div>
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="#">Catatan Kamu</a></li>
+                        <li><a href="#">Tambah Catatan</a></li>
+                    </ul>
+                </div>
             </header>
         `
     }
