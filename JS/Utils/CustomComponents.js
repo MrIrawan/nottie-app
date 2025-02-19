@@ -23,4 +23,21 @@ class AppBar extends HTMLElement {
     }
 }
 
+class AppFooter extends HTMLElement {
+    constructor () {
+        super();
+
+        this.render();
+    }
+
+    render() {
+        this.innerHTML = `
+            <footer class="app-footer">
+                <p>Copyright &copy; 2025 Nottie</p>
+            </footer>
+            `;
+    }
+}
+
 customElements.define('app-bar', AppBar);
+customElements.define('app-footer', AppFooter);
