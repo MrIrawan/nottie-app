@@ -68,8 +68,13 @@ body {
     margin: 0 auto;
 }
 
+.grid-list-notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 24px;
+}
+
 .card-list-notes {
-    width: 500px;
     border: 2px solid var(--main-color);
     padding: 1.5rem;
 }
