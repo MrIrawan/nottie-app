@@ -110,3 +110,17 @@ body {
     color: var(--main-color);
     background: var(--text-color);
 }
+
+.app-footer {
+    background: var(--main-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.app-footer p {
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+}
