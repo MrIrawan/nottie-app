@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "main-regular";
+    src: url('../fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "main-medium";
+    src: url('../fonts/AtkinsonHyperlegibleNext-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "main-semibold";
+    src: url('../fonts/AtkinsonHyperlegibleNext-SemiBold.ttf') format('truetype');
+}
+
+:root {
+    --main-color: #222222;
+    --text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: main-regular;
+}
+
+.app-header {
+    background: var(--main-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-title h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.header-menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+}
+
+.header-menu ul li {
+    list-style-type: none;
+}
+
+.header-menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+.app-footer {
+    background: var(--main-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.app-footer p {
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+}
