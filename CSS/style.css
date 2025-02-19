@@ -14,8 +14,7 @@
 }
 
 :root {
-    --main-color: #111111;
-    --border-color: rgba(0, 0, 0, .5);
+    --main-color: #222222;
     --text-color: #ffffff;
 }
 
@@ -56,4 +55,58 @@ body {
 .header-menu ul li a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+#home {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-content h3 {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.home-content h1 {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    font-size: 48px;
+    line-height: 50px;
+    max-width: 900px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.home-cta {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.home-cta a {
+    text-decoration: none;
+    padding: .5rem .7rem;
+    border: 2px solid var(--main-color);
+    transition: all .2s ease-in-out;
+}
+
+.home-cta a:nth-child(1) {
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+.home-cta a:nth-child(2) {
+    color: var(--main-color);
+    background: var(--text-color);
 }
