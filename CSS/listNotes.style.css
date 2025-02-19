@@ -68,6 +68,11 @@ body {
     margin: 0 auto;
 }
 
+.list-notes-container h1 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
 .grid-list-notes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -113,9 +118,6 @@ body {
 
 .app-footer {
     background: var(--main-color);
-    position: fixed;
-    width: 100%;
-    bottom: 0;
     padding: 1rem;
 }
 
