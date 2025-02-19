@@ -1,4 +1,4 @@
-class AppHeader extends HTMLElement {
+class AppBar extends HTMLElement {
     constructor () {
         super();
 
@@ -15,6 +15,7 @@ class AppHeader extends HTMLElement {
                     <ul>
                         <li><a href="listNotes.html">Catatan Kamu</a></li>
                         <li><a href="addNotes.html">Tambah Catatan</a></li>
+                        <li><a href="index.html">Home</a></li>
                     </ul>
                 </div>
             </header>
@@ -22,4 +23,4 @@ class AppHeader extends HTMLElement {
     }
 }
 
-customElements.define('app-header', AppHeader);
+customElements.define('app-bar', AppBar);
