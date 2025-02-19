@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "main-regular";
+    src: url('../fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "main-medium";
+    src: url('../fonts/AtkinsonHyperlegibleNext-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "main-semibold";
+    src: url('../fonts/AtkinsonHyperlegibleNext-SemiBold.ttf') format('truetype');
+}
+
+:root {
+    --main-color: #222222;
+    --border-color: rgba(0, 0, 0, .5);
+    --text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: main-regular;
+}
+
+.app-header {
+    background: var(--main-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-title h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.header-menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+}
+
+.header-menu ul li {
+    list-style-type: none;
+}
+
+.header-menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#list-notes {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.list-notes-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-list-notes {
+    width: fit-content;
+    border: 2px solid var(--main-color);
+    padding: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.card-list-notes hr {
+    margin: 0;
+}
+
+.card-header p {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    color: --border-color;
+}
+
+.card-content p {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    max-width: 500px;
+}
+
+.app-footer {
+    background: var(--main-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.app-footer p {
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+}
