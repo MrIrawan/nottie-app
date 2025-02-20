@@ -1,5 +1,7 @@
-function AddNotes(notesSchema, dataNotes) {
-    return dataNotes.push(notesSchema);
+import notesData from "../data/notesData.js";
+
+function AddNotes(notesSchema) {
+    notesData.push(notesSchema);
 }
 
 function MakeNotesSchema(notesId, notesTitle, notesContent, notesCreateTime, notesAchieved = false) {

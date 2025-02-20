@@ -40,8 +40,20 @@ function pathNameMethod() {
 function hanldeMakeSchema() {
     const titleNotes = addNotesForm.elements[0];
     const contentNotes = addNotesForm.elements[1];
+
     addNotesForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const notesSchema = MakeNotesSchema(Date.now(), titleNotes.value, contentNotes.value, new Date());
         
+        if (titleNotes.value == '' || contentNotes.value == '') {
+            alert('Judul dan isi catatan tidak boleh kosong.');
+            titleNotes.value = '';
+            contentNotes.value = '';
+        } else {
+            alert('Catatan berhasil ditambahkan.');
+            AddNotes(notesSchema);
+            addNotesForm.reset();
+        }
     })
 }
 
