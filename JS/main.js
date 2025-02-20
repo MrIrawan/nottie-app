@@ -2,28 +2,12 @@ import "./Utils/CustomComponents.js";
 import notesData from "./data/notesData.js";
 import { SaveData, GetData } from "./Utils/StorageUtils.js";
 import { DateFormatter } from "./Utils/DateFormatter.js";
-import { AddNotes, MakeNotesSchema } from "./Utils/NotesUtils.js";
+import { MakeNotesSchema } from "./Utils/NotesUtils.js";
 
 const notesContainer = document.getElementById('notes-container');
 const addNotesForm = document.getElementById('add-notes-form');
+const addedNotes = [...notesData];
 
-function renderBaseNotes(container) {
-    const notes = GetData();
-    notes.forEach(note => {
-        container.insertAdjacentHTML('beforeend', `
-            <div class="card-list-notes">
-                <div class="card-header">
-                    <h3>${note.title}</h3>
-                    <p>${DateFormatter(note.createdAt)}</p>
-                </div>
-                <hr>
-                <div class="card-content">
-                    <p>${note.body}</p>
-                </div>
-            </div>
-        `);
-    });    
-}
 
 function pathNameMethod() {
     const pathName = ['/index.html', '/addNotes.html', '/listNotes.html'];
@@ -46,19 +30,39 @@ function hanldeMakeSchema() {
     addNotesForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const notesSchema = MakeNotesSchema(Date.now(), titleNotes.value, contentNotes.value, new Date());
-        
+
         if (titleNotes.value == '' || contentNotes.value == '') {
             alert('Judul dan isi catatan tidak boleh kosong.');
             titleNotes.value = '';
             contentNotes.value = '';
         } else {
             alert('Catatan berhasil ditambahkan.');
-            AddNotes(notesSchema);
-            console.log(notesData);
+            addedNotes.push(notesSchema);
+            console.log(addedNotes);
+            SaveData(addedNotes);
+            
             
             addNotesForm.reset();
         }
     })
+}
+
+function renderBaseNotes(container) {
+    const notes = GetData();
+    notes.forEach(note => {
+        container.insertAdjacentHTML('beforeend', `
+            <div class="card-list-notes">
+                <div class="card-header">
+                    <h3>${note.title}</h3>
+                    <p>${DateFormatter(note.createdAt)}</p>
+                </div>
+                <hr>
+                <div class="card-content">
+                    <p>${note.body}</p>
+                </div>
+            </div>
+        `);
+    });    
 }
 
 document.addEventListener('DOMContentLoaded', () => {
