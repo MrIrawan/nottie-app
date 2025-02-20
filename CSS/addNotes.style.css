@@ -145,3 +145,11 @@ body {
     color: var(--text-color);
     margin: 0;
 }
+
+.title-notes input:focus {
+    outline: 1px solid var(--main-color);
+}
+
+.content-notes textarea:focus {
+    outline: 1px solid var(--main-color);
+}
