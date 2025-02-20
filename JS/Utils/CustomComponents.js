@@ -57,7 +57,7 @@ class AddForm extends HTMLElement {
                     </div>
                     <div class="content-notes">
                         <label for="content">Isi catatan</label>
-                        <textarea name="content" id="content" placeholder="example... (max 1120 char)"></textarea>
+                        <textarea name="content" id="content" placeholder="example... (max 100 char)"></textarea>
                     </div>
                     <div class="button-notes">
                         <button type="submit">Tambah</button>
