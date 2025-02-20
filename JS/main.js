@@ -23,6 +23,10 @@ function renderBaseNotes(container) {
     });
 }
 
+function pathNameMethod() {
+    
+}
+
 function hanldeMakeSchema() {
     const titleNotes = addNotesForm.elements[0];
     const contentNotes = addNotesForm.elements[1];
