@@ -24,7 +24,17 @@ function renderBaseNotes(container) {
 }
 
 function pathNameMethod() {
-    
+    const pathName = ['/index.html', '/addNotes.html', '/listNotes.html'];
+    const currentPath = window.location.pathname;
+
+    if (currentPath === pathName[1]) {
+        hanldeMakeSchema();
+    } else if (currentPath === pathName[2]) {
+        renderBaseNotes(notesContainer);
+    } else {
+        console.log('selamat datang di Nottie.');
+        
+    }
 }
 
 function hanldeMakeSchema() {
@@ -36,6 +46,5 @@ function hanldeMakeSchema() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    hanldeMakeSchema();
-    renderBaseNotes(notesContainer);
+    pathNameMethod();
 });
