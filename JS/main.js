@@ -1,5 +1,6 @@
 import "./Utils/CustomComponents.js";
 import notesData from "./data/notesData.js";
+import { SaveData, GetData } from "./Utils/StorageUtils.js";
 import { DateFormatter } from "./Utils/DateFormatter.js";
 import { AddNotes, MakeNotesSchema } from "./Utils/NotesUtils.js";
 
@@ -7,9 +8,10 @@ const notesContainer = document.getElementById('notes-container');
 const addNotesForm = document.getElementById('add-notes-form');
 
 function renderBaseNotes(container) {
-    notesData.forEach(note => {
+    const notes = GetData();
+    notes.forEach(note => {
         container.insertAdjacentHTML('beforeend', `
-            <div class="card-list-notes" id="${note.id}">
+            <div class="card-list-notes">
                 <div class="card-header">
                     <h3>${note.title}</h3>
                     <p>${DateFormatter(note.createdAt)}</p>
@@ -20,7 +22,7 @@ function renderBaseNotes(container) {
                 </div>
             </div>
         `);
-    });
+    });    
 }
 
 function pathNameMethod() {
@@ -52,6 +54,8 @@ function hanldeMakeSchema() {
         } else {
             alert('Catatan berhasil ditambahkan.');
             AddNotes(notesSchema);
+            console.log(notesData);
+            
             addNotesForm.reset();
         }
     })

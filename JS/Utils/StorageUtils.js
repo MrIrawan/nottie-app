@@ -1,6 +1,10 @@
-function SaveData(notesData) {
+function SaveData(data) {
     if (typeof Storage !== "undefined") {
-        localStorage.setItem('NOTES_ITEM', JSON.stringify(notesData));
+        if (localStorage.getItem('NOTES_ITEM') !== null) {
+            localStorage.setItem('NOTES_ITEM', JSON.stringify(data));
+        } else {
+            return [];
+        }
     }
 }
 
