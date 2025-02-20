@@ -1,8 +1,10 @@
 import "./Utils/CustomComponents.js";
 import notesData from "./data/notesData.js";
 import { DateFormatter } from "./Utils/DateFormatter.js";
+import { AddNotes, MakeNotesSchema } from "./Utils/NotesUtils.js";
 
 const notesContainer = document.getElementById('notes-container');
+const addNotesForm = document.getElementById('add-notes-form');
 
 function renderBaseNotes(container) {
     notesData.forEach(note => {
@@ -21,6 +23,15 @@ function renderBaseNotes(container) {
     });
 }
 
+function hanldeMakeSchema() {
+    const titleNotes = addNotesForm.elements[0];
+    const contentNotes = addNotesForm.elements[1];
+    addNotesForm.addEventListener('submit', (e) => {
+        
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    hanldeMakeSchema();
     renderBaseNotes(notesContainer);
 });
